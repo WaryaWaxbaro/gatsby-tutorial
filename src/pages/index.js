@@ -2,10 +2,13 @@ import React from "react"
 import Layout from "../components/Layout"
 import * as styles from "../styles/home.module.css"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Home({ data }) {
   console.log(data)
   const { title, description } = data.site.siteMetadata
+  const image = getImage(data.file.childImageSharp.gatsbyImageData)
+  console.log("image ", image)
   return (
     <Layout>
       <main className={`container ${styles.main}`}>
@@ -60,6 +63,9 @@ export default function Home({ data }) {
         <div style={{ maxWidth: "350px" }}>
           <img src="/kitchen_2.jpeg" className="img-fluid" alt="Kitchen" />
         </div>
+        <div style={{ maxWidth: "500px" }}>
+          <GatsbyImage image={image} alt="Test image" />
+        </div>
       </main>
     </Layout>
   )
@@ -71,6 +77,11 @@ export const query = graphql`
       siteMetadata {
         description
         title
+      }
+    }
+    file(relativePath: { eq: "kitchen.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData
       }
     }
   }
