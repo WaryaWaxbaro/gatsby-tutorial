@@ -4,7 +4,8 @@ import { graphql, Link } from "gatsby"
 
 function Projects(props) {
   const { data } = props
-  const projects = data.allMarkdownRemark.nodes
+  const projects = data.projects.nodes
+  const contact = data.contact.siteMetadata.contact
   console.log(data)
   return (
     <Layout>
@@ -22,6 +23,10 @@ function Projects(props) {
             </div>
           ))}
         </div>
+        <div>
+          <p>Contact us</p>
+          <p className="fs-12">{contact}</p>
+        </div>
       </main>
     </Layout>
   )
@@ -31,7 +36,9 @@ export default Projects
 // export page query
 export const query = graphql`
   query ProjectsPage {
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+    projects: allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       nodes {
         id
         frontmatter {
@@ -40,6 +47,11 @@ export const query = graphql`
           title
           date
         }
+      }
+    }
+    contact: site {
+      siteMetadata {
+        contact
       }
     }
   }

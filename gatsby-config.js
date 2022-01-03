@@ -30,5 +30,6 @@ module.exports = {
     title: "Gatspy Tutorial",
     description: "Learning Gatspy the easy way",
     copyright: "This a learning website.",
+    contact: "admin@gatsby-tutorial.com",
   },
 }
