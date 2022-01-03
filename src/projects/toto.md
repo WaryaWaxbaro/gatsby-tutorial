@@ -1,7 +1,8 @@
 ---
 title: The Gatspy Tutorial Toto File
-stack: HTML & CSS
+stack: HTML & CSS & TOTO
 slug: gatsby-toto
+date: 2022-01-03T00:00:00+00:00
 ---
 
 # Heading
