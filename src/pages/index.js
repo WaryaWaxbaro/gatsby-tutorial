@@ -52,6 +52,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div style={{ maxWidth: "350px" }}>
+          <img src="/kitchen_2.jpeg" className="img-fluid" alt="Kitchen" />
+        </div>
       </main>
     </Layout>
   )
