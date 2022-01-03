@@ -3,6 +3,8 @@ title: The Gatspy Tutorial Toto File
 stack: HTML & CSS & TOTO
 slug: gatsby-toto
 date: 2022-01-03T00:00:00+00:00
+thumbs: ../images/thumbs/food.png
+featured: ../images/featur/food-banner.png
 ---
 
 # Heading

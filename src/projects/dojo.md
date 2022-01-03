@@ -3,6 +3,8 @@ title: Dojo Gatsby
 stack: HTML & CSS & DOJO
 slug: gatsby-dojo
 date: 2022-01-01T00:00:00+00:00
+thumbs: ../images/thumbs/coffee.png
+featured: ../images/featur/coffee-banner.png
 ---
 
 ## Heading
