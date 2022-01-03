@@ -9,7 +9,7 @@ export default function Home() {
         <h1>This is the body</h1>
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-primary rounded-0 btn-lg text-uppercase no-shadow"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >

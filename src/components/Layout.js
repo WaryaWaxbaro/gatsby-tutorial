@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "./Navbar"
 import "../styles/global.css"
+import "../sass/main.scss"
 
 function Layout(props) {
   return (
