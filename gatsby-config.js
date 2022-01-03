@@ -11,4 +11,9 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
     },
   ],
+  siteMetadata: {
+    title: "Gatspy Tutorial",
+    description: "Learning Gatspy the easy way",
+    copyright: "This a learning website.",
+  },
 }

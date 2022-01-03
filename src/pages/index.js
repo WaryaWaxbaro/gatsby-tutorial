@@ -1,12 +1,17 @@
 import React from "react"
 import Layout from "../components/Layout"
 import * as styles from "../styles/home.module.css"
+import { graphql } from "gatsby"
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(data)
+  const { title, description } = data.site.siteMetadata
   return (
     <Layout>
       <main className={`container ${styles.main}`}>
         <h1>This is the body</h1>
+        <p>{title}</p>
+        <p>{description}</p>
         <button
           type="button"
           className="btn btn-primary rounded-0 btn-lg text-uppercase no-shadow"
@@ -59,3 +64,14 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query SiteInfo {
+    site {
+      siteMetadata {
+        description
+        title
+      }
+    }
+  }
+`
